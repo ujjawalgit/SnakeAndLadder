@@ -11,8 +11,14 @@ public class SnakeAndLadder {
            switch(option){
 
                case LADDER:
-                      position+=die;
+		   if( (position+die)>100) ) {
+                      position=position;
                       break;
+		   }
+		   else{
+			position+=die;
+			break;
+		   }
 
                case SNAKE:
                   if( (position-die)<0){
