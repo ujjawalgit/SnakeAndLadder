@@ -40,7 +40,7 @@ public class SnakeAndLadder{
 			}
 			
 			option = (int) Math.floor(Math.random()*10)%3;
-			if(option==LADDER)
+			if(option==LADDER && positionOfPlayer[turn]!=100)
 				play();
 			else
 				turn=turn==0?1:0;
@@ -49,11 +49,11 @@ public class SnakeAndLadder{
 public static void main(String[] args) {
 	    while(true) {
 			if(positionOfPlayer[0]==100){
-				System.out.println("\nPalayer_1"+" won the game"+"\nnumber of times dice rolled to win the game by Palayer_1"+" is:"+count[0]);
+				System.out.println("\nPalayer_1 won the game \nnumber of times dice rolled to win the game by Palayer_1 is:"+count[0]);
 				break;
 			}
-			else if(positionOfPlayer[1]==100){
-				System.out.println("\nPalayer_2"+" won the game"+"\nnumber of times dice rolled to win the game by Palayer_2"+" is:"+count[1]);
+			if(positionOfPlayer[1]==100){
+				System.out.println("\nPalayer_2 won the game \nnumber of times dice rolled to win the game by Palayer_2 is:"+count[1]);
 				break;
 			}
 			play();			   
